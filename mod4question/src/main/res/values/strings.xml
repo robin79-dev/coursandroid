@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">mod4question</string>
+    <string name="labelButtonVrai">Vrai</string>
+    <string name="labelButtonFalse">Faux</string>
 </resources>
