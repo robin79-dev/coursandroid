@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.mod9room'
+    namespace 'com.example.mod9tp'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.mod9room"
+        applicationId "com.example.mod9tp"
         minSdk 21
         targetSdk 32
         versionCode 1
