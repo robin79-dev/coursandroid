@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         dataBinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         viewModel=ViewModelProvider(this)[DiceViewModel::class.java]
         dataBinding.vm=viewModel
+        dataBinding.lifecycleOwner = this
+
 
         dataBinding.button10.setOnClickListener{
             viewModel.dice(10)

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.mod8tp.CityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WeatherFragment">
+
+        <Button
+            android:id="@+id/buttonNantes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="Nantes"
+            app:layout_constraintEnd_toStartOf="@+id/buttonNiort"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemperature" />
+
+        <Button
+            android:id="@+id/buttonNiort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="Niort"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonNantes"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemperature" />
+
+        <Button
+            android:id="@+id/buttonMarseille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marseille"
+            app:layout_constraintEnd_toStartOf="@+id/buttonLille"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonNantes" />
+
+        <Button
+            android:id="@+id/buttonLille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lille"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonMarseille"
+            app:layout_constraintTop_toBottomOf="@+id/buttonNiort" />
+
+        <Button
+            android:id="@+id/buttonLyon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lyon"
+            app:layout_constraintEnd_toStartOf="@+id/buttonRennes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonMarseille" />
+
+        <Button
+            android:id="@+id/buttonRennes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rennes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonLyon"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLille" />
+
+        <TextView
+            android:id="@+id/textViewTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="70dp"
+            android:text="@{vm.city.city}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewVille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="29dp"
+            android:text="@{String.valueOf(vm.temperature)}"
+            app:layout_constraintEnd_toEndOf="@+id/textViewTemperature"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTemperature" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
