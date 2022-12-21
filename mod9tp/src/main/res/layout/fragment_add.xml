@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddFragment">
+
+        <EditText
+            android:id="@+id/editTextLieu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="123dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="98dp"
+            tools:text="Lieu" />
+
+        <RatingBar
+            android:id="@+id/ratingBarNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLieu"
+            tools:layout_editor_absoluteX="85dp" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajouter"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBarNote"
+            tools:layout_editor_absoluteX="144dp" />
+
+        <Button
+            android:id="@+id/buttonShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voir"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAdd"
+            tools:layout_editor_absoluteX="141dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
